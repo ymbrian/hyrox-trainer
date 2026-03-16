@@ -1,0 +1,345 @@
+{
+  "meta": {
+    "version": "1.0",
+    "notes": "Core exercise library for LLM training plan generation. LLM selects from this list — does not invent exercises. Max 5 exercises per session."
+  },
+  "stations": {
+    "SkiErg": [
+      {
+        "name": "SkiErg Steady-State",
+        "description": "2000m at controlled, sustainable pace",
+        "primary_muscles": ["Lats", "Triceps", "Core", "Shoulders"],
+        "equipment": ["Concept2 SkiErg"]
+      },
+      {
+        "name": "SkiErg Sprint Intervals",
+        "description": "8–10 x 200m with 30s rest between efforts",
+        "primary_muscles": ["Lats", "Triceps", "Core"],
+        "equipment": ["Concept2 SkiErg"]
+      },
+      {
+        "name": "Lat Pulldown",
+        "description": "Standard lat pulldown, controlled tempo",
+        "primary_muscles": ["Latissimus dorsi", "Biceps", "Rear delts"],
+        "equipment": ["Cable machine"]
+      },
+      {
+        "name": "Medicine Ball Slams",
+        "description": "Explosive overhead-to-floor slams",
+        "primary_muscles": ["Lats", "Core", "Shoulders", "Triceps"],
+        "equipment": ["Medicine ball"]
+      },
+      {
+        "name": "Cable Straight-Arm Pulldown",
+        "description": "Arms straight, pull bar from overhead to hips",
+        "primary_muscles": ["Lats", "Core"],
+        "equipment": ["Cable machine or resistance band"]
+      }
+    ],
+    "Sled Push": [
+      {
+        "name": "Heavy Sled Push",
+        "description": "4–6 x 20m at above race weight",
+        "primary_muscles": ["Quads", "Glutes", "Calves", "Core"],
+        "equipment": ["Sled", "Weight plates"]
+      },
+      {
+        "name": "Sprint Sled Push",
+        "description": "6 x 20m at 50–60% race weight, maximum speed",
+        "primary_muscles": ["Quads", "Glutes", "Hip flexors"],
+        "equipment": ["Sled", "Weight plates"]
+      },
+      {
+        "name": "Back Squat",
+        "description": "Barbell back squat, below parallel",
+        "primary_muscles": ["Quads", "Glutes", "Hamstrings", "Spinal erectors"],
+        "equipment": ["Barbell", "Rack"]
+      },
+      {
+        "name": "Bulgarian Split Squat",
+        "description": "Rear foot elevated, front leg does the work",
+        "primary_muscles": ["Quads", "Glutes (unilateral)"],
+        "equipment": ["Bench", "Dumbbells or barbell"]
+      },
+      {
+        "name": "Box Jump",
+        "description": "Explosive two-foot jump onto box, step down",
+        "primary_muscles": ["Quads", "Glutes", "Calves"],
+        "equipment": ["Plyo box"]
+      }
+    ],
+    "Sled Pull": [
+      {
+        "name": "Heavy Sled Pull",
+        "description": "4–6 x 12.5m hand-over-hand rope pull at race weight or above",
+        "primary_muscles": ["Hamstrings", "Glutes", "Lats", "Grip"],
+        "equipment": ["Sled", "Rope"]
+      },
+      {
+        "name": "Conventional Deadlift",
+        "description": "Barbell deadlift from floor, full hip extension",
+        "primary_muscles": ["Hamstrings", "Glutes", "Lower back", "Grip"],
+        "equipment": ["Barbell", "Weight plates"]
+      },
+      {
+        "name": "Single-Arm Bent-Over Row",
+        "description": "Unilateral row with dumbbell, chest supported or freestanding",
+        "primary_muscles": ["Lats", "Rhomboids", "Rear delts", "Biceps"],
+        "equipment": ["Dumbbell"]
+      },
+      {
+        "name": "Seated Cable Row",
+        "description": "Heavy bilateral cable row, full retraction at finish",
+        "primary_muscles": ["Lats", "Rhomboids", "Biceps", "Core"],
+        "equipment": ["Cable machine"]
+      },
+      {
+        "name": "Dead Hang",
+        "description": "Max-duration hang from pull-up bar, passive grip",
+        "primary_muscles": ["Grip", "Forearms", "Lats"],
+        "equipment": ["Pull-up bar"]
+      }
+    ],
+    "Burpee Broad Jump": [
+      {
+        "name": "Burpee Broad Jump",
+        "description": "Race-standard sets of 20–30 reps: chest to floor, explosive forward jump",
+        "primary_muscles": ["Full body", "Quads", "Glutes", "Chest", "Triceps", "Core"],
+        "equipment": []
+      },
+      {
+        "name": "Box Jump",
+        "description": "Explosive two-foot jump onto box, maximum height",
+        "primary_muscles": ["Quads", "Glutes", "Calves", "Hip flexors"],
+        "equipment": ["Plyo box"]
+      },
+      {
+        "name": "Broad Jump",
+        "description": "Standing horizontal jump for maximum distance, 5 x 5 reps",
+        "primary_muscles": ["Quads", "Glutes", "Hip extensors"],
+        "equipment": []
+      },
+      {
+        "name": "High-Volume Push-Up",
+        "description": "4 x 20+ reps, full range of motion, chest to floor",
+        "primary_muscles": ["Chest", "Triceps", "Anterior deltoid", "Core"],
+        "equipment": []
+      },
+      {
+        "name": "Jump Squat",
+        "description": "Squat to parallel, explode upward, land softly",
+        "primary_muscles": ["Quads", "Glutes", "Calves"],
+        "equipment": []
+      }
+    ],
+    "Rowing": [
+      {
+        "name": "Rowing Steady-State",
+        "description": "3–5 x 1000m at controlled pace, 2 min rest between efforts",
+        "primary_muscles": ["Full body", "Legs", "Back", "Core", "Shoulders"],
+        "equipment": ["Concept2 RowErg"]
+      },
+      {
+        "name": "Rowing Intervals",
+        "description": "5 x 500m at race pace or above, 1 min rest between efforts",
+        "primary_muscles": ["Full body", "Cardiovascular system"],
+        "equipment": ["Concept2 RowErg"]
+      },
+      {
+        "name": "Bent-Over Barbell Row",
+        "description": "Barbell row, hinge at hip, pull to lower chest",
+        "primary_muscles": ["Lats", "Rhomboids", "Rear delts", "Biceps"],
+        "equipment": ["Barbell"]
+      },
+      {
+        "name": "Romanian Deadlift",
+        "description": "Hip hinge with soft knee, bar stays close to legs",
+        "primary_muscles": ["Hamstrings", "Glutes", "Lower back"],
+        "equipment": ["Barbell"]
+      },
+      {
+        "name": "Assault Bike Intervals",
+        "description": "10 x 30s hard effort, 30s easy recovery",
+        "primary_muscles": ["Full body", "Cardiovascular system"],
+        "equipment": ["Assault bike or Echo bike"]
+      }
+    ],
+    "Farmers Carry": [
+      {
+        "name": "Heavy Farmers Carry",
+        "description": "5 x 40m at or above race weight, controlled pace",
+        "primary_muscles": ["Grip", "Traps", "Core", "Spinal erectors"],
+        "equipment": ["Kettlebells or dumbbells"]
+      },
+      {
+        "name": "Single-Arm Farmers Carry",
+        "description": "4 x 20m each side, resist lateral lean",
+        "primary_muscles": ["Obliques", "Grip", "Traps"],
+        "equipment": ["Single kettlebell or dumbbell"]
+      },
+      {
+        "name": "Suitcase Carry",
+        "description": "4 x 20m each side, weight held to one side like a suitcase",
+        "primary_muscles": ["Obliques", "Quadratus lumborum", "Grip"],
+        "equipment": ["Kettlebell or dumbbell"]
+      },
+      {
+        "name": "Pinch Grip Plate Hold",
+        "description": "3 x max duration, hold weight plate between fingers and thumb",
+        "primary_muscles": ["Fingers", "Thumb", "Forearm intrinsics"],
+        "equipment": ["Weight plate"]
+      },
+      {
+        "name": "Barbell Shrug",
+        "description": "Heavy shrug, 4 x 10, full elevation and brief hold",
+        "primary_muscles": ["Traps", "Levator scapulae"],
+        "equipment": ["Barbell"]
+      }
+    ],
+    "Sandbag Lunges": [
+      {
+        "name": "Sandbag Walking Lunge",
+        "description": "Race-standard sets of 20–30m with race-weight sandbag on shoulders",
+        "primary_muscles": ["Quads", "Glutes", "Hamstrings", "Core"],
+        "equipment": ["Sandbag (race weight)"]
+      },
+      {
+        "name": "Bulgarian Split Squat",
+        "description": "4 x 8–10 each leg, rear foot elevated, deep range of motion",
+        "primary_muscles": ["Quads", "Glutes", "Hip flexors"],
+        "equipment": ["Bench", "Barbell or dumbbells"]
+      },
+      {
+        "name": "Front Rack Walking Lunge",
+        "description": "4 x 20m with barbell or kettlebells in front rack position",
+        "primary_muscles": ["Quads", "Glutes", "Core", "Shoulders"],
+        "equipment": ["Barbell or kettlebells"]
+      },
+      {
+        "name": "Reverse Lunge",
+        "description": "4 x 12 each leg, step backward into lunge",
+        "primary_muscles": ["Quads", "Glutes", "Hamstrings"],
+        "equipment": ["Barbell or dumbbells"]
+      },
+      {
+        "name": "Hip Flexor Mobility — Couch Stretch",
+        "description": "Daily mobility work, 3 x 60s each side",
+        "primary_muscles": ["Hip flexors", "Rectus femoris"],
+        "equipment": []
+      }
+    ],
+    "Wall Balls": [
+      {
+        "name": "Wall Ball",
+        "description": "Race-standard sets of 20–30 unbroken reps, break parallel on each squat",
+        "primary_muscles": ["Quads", "Glutes", "Shoulders", "Core"],
+        "equipment": ["Medicine ball (race weight)", "Wall target"]
+      },
+      {
+        "name": "High-Volume Wall Ball",
+        "description": "50–100 rep time trial, simulate race conditions",
+        "primary_muscles": ["Quads", "Glutes", "Deltoids", "Core"],
+        "equipment": ["Medicine ball", "Wall target"]
+      },
+      {
+        "name": "Dumbbell Thruster",
+        "description": "4 x 12, full squat into overhead press in one movement",
+        "primary_muscles": ["Quads", "Glutes", "Shoulders", "Triceps", "Core"],
+        "equipment": ["Dumbbells or barbell"]
+      },
+      {
+        "name": "Front Squat",
+        "description": "4 x 6–8, barbell in front rack, below parallel",
+        "primary_muscles": ["Quads", "Glutes", "Core", "Upper back"],
+        "equipment": ["Barbell", "Rack"]
+      },
+      {
+        "name": "Push Press",
+        "description": "4 x 8, leg drive into overhead press",
+        "primary_muscles": ["Deltoids", "Triceps", "Core", "Quads"],
+        "equipment": ["Barbell or dumbbells"]
+      }
+    ]
+  },
+  "running": [
+    {
+      "name": "Zone 2 Long Run",
+      "type": "easy_run",
+      "description": "Sustained easy effort at 75–80% max heart rate",
+      "prescription_fields": ["duration_minutes", "pace_per_km"]
+    },
+    {
+      "name": "Tempo Run",
+      "type": "tempo_run",
+      "description": "Comfortably hard, sustained effort at ~85% max heart rate",
+      "prescription_fields": ["duration_minutes", "pace_per_km"]
+    },
+    {
+      "name": "1km Interval Repeats",
+      "type": "intervals",
+      "description": "Repeated 1km efforts at 90–95% effort with full recovery between",
+      "prescription_fields": ["reps", "distance_m", "pace_per_km", "rest_seconds"]
+    },
+    {
+      "name": "800m Interval Repeats",
+      "type": "intervals",
+      "description": "Repeated 800m efforts at high intensity with full recovery between",
+      "prescription_fields": ["reps", "distance_m", "pace_per_km", "rest_seconds"]
+    },
+    {
+      "name": "500m Interval Repeats",
+      "type": "intervals",
+      "description": "Repeated 500m efforts at near-maximum intensity with full recovery between",
+      "prescription_fields": ["reps", "distance_m", "pace_per_km", "rest_seconds"]
+    },
+    {
+      "name": "Compromised Run",
+      "type": "compromised_run",
+      "description": "Station workout immediately followed by a 1km run, repeated for 4–6 rounds. Simulates race fatigue.",
+      "prescription_fields": ["rounds", "station", "distance_m", "pace_per_km"]
+    },
+    {
+      "name": "Hill Repeats",
+      "type": "intervals",
+      "description": "Hard uphill efforts on a hill or treadmill incline (6–8%), walk/jog recovery back to start",
+      "prescription_fields": ["reps", "duration_seconds", "incline_pct"]
+    }
+  ],
+  "general": [
+    {
+      "name": "Conventional Deadlift",
+      "description": "Barbell deadlift from floor, full hip extension at top",
+      "primary_muscles": ["Hamstrings", "Glutes", "Spinal erectors", "Grip", "Lats"],
+      "stations_benefited": ["Sled Push", "Sled Pull", "Farmers Carry", "Rowing"],
+      "equipment": ["Barbell", "Weight plates"]
+    },
+    {
+      "name": "Back Squat",
+      "description": "Barbell back squat, below parallel",
+      "primary_muscles": ["Quads", "Glutes", "Hamstrings", "Core"],
+      "stations_benefited": ["Sled Push", "Sandbag Lunges", "Wall Balls", "Burpee Broad Jump"],
+      "equipment": ["Barbell", "Rack"]
+    },
+    {
+      "name": "Kettlebell Swing",
+      "description": "Hip-hinge driven swing to shoulder height, explosive hip extension",
+      "primary_muscles": ["Hamstrings", "Glutes", "Lower back", "Core", "Shoulders"],
+      "stations_benefited": ["SkiErg", "Sled Pull", "Rowing"],
+      "equipment": ["Kettlebell"]
+    },
+    {
+      "name": "Goblet Squat",
+      "description": "Squat holding kettlebell at chest, below parallel",
+      "primary_muscles": ["Quads", "Glutes", "Core"],
+      "stations_benefited": ["Wall Balls", "Sandbag Lunges", "Burpee Broad Jump"],
+      "equipment": ["Kettlebell"]
+    },
+    {
+      "name": "Core Circuit",
+      "description": "3 rounds: Plank 60s + Dead Bug 10 reps each side + Pallof Press 10 reps each side",
+      "primary_muscles": ["Transverse abdominis", "Obliques", "Spinal erectors"],
+      "stations_benefited": ["All stations", "Running"],
+      "equipment": ["Cable machine or resistance band"]
+    }
+  ]
+}
