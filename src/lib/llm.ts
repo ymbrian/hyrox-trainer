@@ -25,7 +25,7 @@ TOP WEAKNESSES (biggest improvement opportunities):
 ${analysis.weaknesses.map((w, i) => `${i + 1}. ${w.category}: gap of ${formatSecs(w.gap)} (${formatSecs(w.actualTime)} → ${formatSecs(w.targetTime)})`).join("\n")}
 
 EXERCISE LIBRARY (you MUST only select exercises from this list):
-${JSON.stringify(exercises)}
+${JSON.stringify(compactExercises())}
 
 PERIODIZATION:
 - Base (Week 1): Higher volume, lower intensity. Aerobic base, movement patterns. Zone 2 runs dominant. General compound lifts.
@@ -225,6 +225,24 @@ function validatePlan(data: unknown): void {
       }
     }
   }
+}
+
+/** Extract just name + category from exercise library to reduce prompt tokens */
+function compactExercises(): Record<string, string[]> {
+  const raw = exercises as Record<string, unknown>;
+  const result: Record<string, string[]> = {};
+
+  for (const section of ["stations", "running", "general"] as const) {
+    const group = raw[section];
+    if (!group || typeof group !== "object") continue;
+
+    for (const [category, items] of Object.entries(group as Record<string, unknown>)) {
+      if (Array.isArray(items)) {
+        result[category] = items.map((e: Record<string, string>) => e.name).filter(Boolean);
+      }
+    }
+  }
+  return result;
 }
 
 function formatSecs(s: number): string {

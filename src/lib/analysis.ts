@@ -33,7 +33,12 @@ export function analyzeRace(inputs: UserInputs): RaceAnalysis {
   }
 
   const splitData = ageBenchmarks.splits;
-  const roxzoneBenchmark = ageBenchmarks.roxzone ?? { pct_of_total: 0, p25: 0, p50: 0, p75: 0 };
+  const roxzoneBenchmark = ageBenchmarks.roxzone;
+  if (!roxzoneBenchmark) {
+    throw new Error(
+      `No Roxzone benchmark data for ${segment} / ${inputs.ageGroup}`
+    );
+  }
 
   // Sum pct_of_total for ALL trainable categories (16 splits + Roxzone)
   let totalPctSum = 0;

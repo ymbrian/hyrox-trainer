@@ -195,11 +195,11 @@ export default function Home() {
           />
         )}
 
-        {step === "training" && plan && startDate && inputs.trainingDays !== undefined && (
+        {step === "training" && plan && startDate && typeof inputs.trainingDays === "number" && (
           <TodayView
             plan={plan}
             startDate={startDate}
-            trainingDays={(inputs as UserInputs).trainingDays}
+            trainingDays={inputs.trainingDays}
             completedSessions={completedSessions}
             onToggleComplete={handleToggleComplete}
             onStartOver={handleStartOver}

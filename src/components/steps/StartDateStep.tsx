@@ -7,11 +7,12 @@ interface Props {
   onBack: () => void;
 }
 
-/** Get next Monday as YYYY-MM-DD */
+/** Get today if Monday, otherwise next Monday as YYYY-MM-DD */
 function getNextMonday(): string {
   const d = new Date();
   const day = d.getDay(); // 0=Sun, 1=Mon, ...
-  const daysUntilMonday = day === 0 ? 1 : day === 1 ? 0 : 8 - day;
+  const daysUntilMonday = (8 - day) % 7 || 7; // Sun=1, Mon=0 handled below
+  if (day === 1) return toISO(d); // Today is Monday — use it
   d.setDate(d.getDate() + daysUntilMonday);
   return toISO(d);
 }
@@ -38,13 +39,12 @@ export default function StartDateStep({ onNext, onBack }: Props) {
   const [error, setError] = useState("");
 
   // Compute end date for display
-  const endDateDisplay = value
-    ? (() => {
-        const end = new Date(value + "T00:00:00");
-        end.setDate(end.getDate() + 27);
-        return formatDisplayDate(toISO(end));
-      })()
-    : "";
+  let endDateDisplay = "";
+  if (value) {
+    const end = new Date(value + "T00:00:00");
+    end.setDate(end.getDate() + 27);
+    endDateDisplay = formatDisplayDate(toISO(end));
+  }
 
   function handleSubmit() {
     const d = new Date(value + "T00:00:00");

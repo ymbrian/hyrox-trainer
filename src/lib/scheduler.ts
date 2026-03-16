@@ -98,12 +98,10 @@ function placeSession(
   for (let s = 0; s < totalSlots; s++) {
     if (slots[s] !== null) continue;
 
-    // Skip slot if previous slot is occupied by a high-intensity session (avoid adjacent highs)
-    if (s > 0 && slots[s - 1] !== null) {
-      // We can't easily look up intensity from the slot index alone,
-      // but high-intensity sessions reserve the next slot as rest.
-      // If the previous slot is taken and THIS session is high, skip to avoid clustering.
-      if (needsRestAfter) continue;
+    // Skip if this is a high-intensity session and the previous slot is occupied
+    // (avoids clustering high sessions back-to-back)
+    if (needsRestAfter && s > 0 && slots[s - 1] !== null) {
+      continue;
     }
 
     if (needsRestAfter) {
